@@ -1,11 +1,13 @@
 import css from './Logo.module.scss';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { usePopup } from 'contexts/PopupContext';
 import Icon from 'components/Icon/Icon';
 
 const Logo = () => {
   const { menuClose } = usePopup();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const spinner = document.querySelector(`[data-name="spinner"]`);
@@ -32,7 +34,7 @@ const Logo = () => {
       </div>
       <div className={css.LogoText}>
         <p>Front-End</p>
-        <span>Developer</span>
+        <span>{t('logo')}</span>
       </div>
     </NavLink>
   );

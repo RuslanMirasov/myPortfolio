@@ -1,31 +1,43 @@
+import { useTranslation } from 'react-i18next';
 import Section from '../components/Section/Section';
 import { TitleBox, Title, Text } from 'components/Typography';
-import { Button, ButtonsList } from 'components/Buttons';
-import { usePopup } from 'contexts/PopupContext';
+import { Button, ButtonsList, ScrollDown } from 'components/Buttons';
 import LandingEffect from 'components/LandingEffect/LandingEffect';
 
 const Home = () => {
-  const { popupOpen } = usePopup();
+  const { t } = useTranslation();
+
   return (
     <>
-      <Section full>
+      <Section full extraClass="section-hero">
         <LandingEffect />
         <TitleBox>
-          <Text>Hello, my name is Ruslan and I am</Text>
+          <Text>{t('hero_head')}</Text>
           <Title tag="h1" size="h1">
             FRONT-END <br />
-            DEVELOPER
+            {t('logo')}
           </Title>
-          <Text>
-            Development of adaptive, cross-browser, and cross-platform <br />
-            web applications with readable, semantic, and clean code <br />
-            based on your PSD or Figma design layout.
-          </Text>
+          <Text width="450">{t('hero_subtitle')}</Text>
           <ButtonsList>
-            <Button onClick={() => popupOpen('request', 'Place an order', 'Fill out the form and I will contact you shortly.')}>
-              View portfolio
-            </Button>
+            <Button scrollto="section-portfolio">{t('hero_button')}</Button>
           </ButtonsList>
+        </TitleBox>
+        <ScrollDown scrollto="section-skills" />
+      </Section>
+
+      <Section bg="#eee" padT padB extraClass="section-portfolio">
+        <TitleBox>
+          <Title tag="h2" size="h2">
+            {t('portfolio')}
+          </Title>
+        </TitleBox>
+      </Section>
+
+      <Section padT padB full extraClass="section-skills">
+        <TitleBox>
+          <Title tag="h2" size="h2">
+            {t('skills')}
+          </Title>
         </TitleBox>
       </Section>
     </>

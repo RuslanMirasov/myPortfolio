@@ -1,0 +1,14 @@
+{
+  "languageCode": "En",
+  "logo": "Developer",
+  "hero_button": "View portfolio",
+  "hero_head": "Hello, my name is Ruslan and I am",
+  "hero_subtitle": "Development of adaptive, cross-browser, and cross-platform web applications with readable, semantic, and clean code based on your PSD or Figma design layout.",
+  "home": "Home",
+  "blog": "Blog",
+  "portfolio": "Portfolio",
+  "about": "About",
+  "skills": "Skills",
+  "contacts": "Contacts",
+  "to_order": "To Order"
+}

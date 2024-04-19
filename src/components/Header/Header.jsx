@@ -6,7 +6,7 @@ import LanguageSelect from 'components/LanguageSelect/LanguageSelect';
 
 const Header = () => {
   return (
-    <header className={css.Header}>
+    <header className={`${css.Header} header`}>
       <div className={css.Container}>
         <div className={css.LeftPart}>
           <Logo />

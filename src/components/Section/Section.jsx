@@ -1,4 +1,5 @@
 import css from './Section.module.scss';
+import './Sections.scss';
 import { useState, useEffect } from 'react';
 
 const hexColor = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
@@ -23,7 +24,7 @@ const bgCheck = bgStyle => {
   return `url(${bgStyle}) no-repeat center center / cover`;
 };
 
-const Section = ({ bg = 'none', dark, full, padT, padB, noline, children }) => {
+const Section = ({ bg, dark, full, padT, padB, noline, extraClass, children }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -31,6 +32,7 @@ const Section = ({ bg = 'none', dark, full, padT, padB, noline, children }) => {
   }, []);
 
   const sectionClasses = {
+    [extraClass]: extraClass,
     [css.Section]: true,
     [css.padTopNormal]: padT,
     [css.padBottomNormal]: padB,
@@ -49,7 +51,7 @@ const Section = ({ bg = 'none', dark, full, padT, padB, noline, children }) => {
     .join(' ');
 
   return (
-    <section className={currentSectionClasses} style={{ background: bgCheck(bg) }}>
+    <section className={currentSectionClasses} style={bg && { background: bgCheck(bg) }}>
       {!noline && <div className={css.Lines}></div>}
       <div className="container">{children}</div>
     </section>

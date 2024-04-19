@@ -1,6 +1,6 @@
 import css from './Text.module.scss';
 
-const Text = ({ size, children }) => {
+const Text = ({ size, width, children }) => {
   const textClasses = {
     [css.Text]: true,
     [css.Big]: size === 'big',
@@ -11,7 +11,11 @@ const Text = ({ size, children }) => {
     .filter(key => textClasses[key])
     .join(' ');
 
-  return <p className={currentTextClasses}>{children}</p>;
+  return (
+    <p className={currentTextClasses} style={width && { maxWidth: width + 'px' }}>
+      {children}
+    </p>
+  );
 };
 
 export default Text;

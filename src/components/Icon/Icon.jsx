@@ -242,6 +242,12 @@ const Landing3 = ({ size = 70, color }) => (
   </svg>
 );
 
+const Scrolldown = ({ color }) => (
+  <svg viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 11L50 43L98 11" stroke={color} strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
 const Icon = ({ name, color = 'currentColor', ...props }) => {
   return (
     <>
@@ -254,6 +260,7 @@ const Icon = ({ name, color = 'currentColor', ...props }) => {
       {name === 'landing1' && <Landing1 {...props} />}
       {name === 'landing2' && <Landing2 {...props} />}
       {name === 'landing3' && <Landing3 color={color} {...props} />}
+      {name === 'scrolldown' && <Scrolldown color={color} {...props} />}
     </>
   );
 };

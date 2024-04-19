@@ -5,9 +5,6 @@
   height: auto;
   color: inherit;
   transition: 1s;
-  .container {
-    z-index: 5;
-  }
   &:before {
     content: '';
     display: block;

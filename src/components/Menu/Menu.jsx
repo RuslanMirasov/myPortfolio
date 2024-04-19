@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { usePopup } from 'contexts/PopupContext';
 import { useEffect } from 'react';
 import { addArrowsToMultipleLinks, arrowBtnAction } from 'utils/menuFunctions';
@@ -7,6 +8,7 @@ import css from './Menu.module.scss';
 
 const Menu = () => {
   const { popupOpen } = usePopup();
+  const { t } = useTranslation();
 
   useEffect(() => {
     addArrowsToMultipleLinks(css.Menu, css.More, handleArrowClick);
@@ -18,8 +20,8 @@ const Menu = () => {
 
   return (
     <ul className={`${css.Menu} custom-scrollbar`}>
-      <MenuLink to="./" text="Home" />
-      <MenuLink to="./blog" text="Blog">
+      <MenuLink scrollto="body" text={t('home')} />
+      <MenuLink to="./blog" text={t('blog')}>
         <ul>
           <MenuLink to="./blog" text="Edication">
             <ul>
@@ -92,14 +94,15 @@ const Menu = () => {
           </MenuLink>
         </ul>
       </MenuLink>
-      <MenuLink to="./portfolio" text="Portfolio" />
-      <MenuLink to="./books" text="About" />
-      <MenuLink to="./books" text="Skills" />
-      <MenuLink to="./books" text="Contacts" />
+      <MenuLink to="./portfolio" text={t('portfolio')} />
+      <MenuLink to="./books" text={t('about')} />
+      <MenuLink scrollto="section-skills" text="test" />
+      <MenuLink scrollto="section-skills" text={t('skills')} />
+      <MenuLink to="./books" text={t('contacts')} />
       <MenuLink
         text={
           <Button size="small" variant="border-dark">
-            To Order
+            {t('to_order')}
           </Button>
         }
         onClick={() => popupOpen('request')}
