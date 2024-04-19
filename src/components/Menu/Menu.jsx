@@ -56,6 +56,7 @@ const Menu = () => {
               <MenuLink to="./blog" text="Buttons">
                 <ul>
                   <MenuLink to="./blog" text="Button" />
+                  <MenuLink to="./blog" text="Buttons List" />
                   <MenuLink to="./blog" text="Close Button" />
                   <MenuLink to="./blog" text="Burger Button" />
                   <MenuLink to="./blog" text="Theme Switcher" />
