@@ -1,36 +1,31 @@
 .Header {
   position: fixed;
+  top: 0px;
+  left: 0px;
   width: 100%;
-  padding: 14px 0px;
+  padding: 10px 0px;
   color: var(--text-color);
   background: var(--white);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  // border-bottom: 1px solid rgba(255, 255, 255, 0);
-  // backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   z-index: 10;
   &.fix {
     color: var(--text-color);
-    background: var(--white);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
 }
 
 .Container {
-  composes: container from 'index.scss';
   display: flex;
   width: 100%;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.HeaderUserInfo {
+.LeftPart {
   display: inline-flex;
-  position: relative;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   align-content: center;
-  gap: 10px;
-  z-index: 2;
+  gap: 40px;
 }

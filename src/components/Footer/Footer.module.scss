@@ -5,10 +5,11 @@
 }
 
 .Container {
-  composes: container from 'index.scss';
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }

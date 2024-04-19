@@ -3,9 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
 
 const Home = lazy(() => import('pages/Home'));
-const Book = lazy(() => import('pages/Book'));
-const Thema = lazy(() => import('pages/Thema'));
-const Words = lazy(() => import('pages/Words'));
+const Blog = lazy(() => import('pages/Blog'));
+const Portfolio = lazy(() => import('pages/Portfolio'));
 const NotFound = lazy(() => import('pages/NotFound'));
 
 const App = () => {
@@ -13,10 +12,8 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/books" element={<Home />} />
-        <Route path="/books/:bookId" element={<Book />} />
-        <Route path="/books/:bookId/:themId" element={<Thema />} />
-        <Route path="/books/:bookId/:themId/:wordId" element={<Words />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

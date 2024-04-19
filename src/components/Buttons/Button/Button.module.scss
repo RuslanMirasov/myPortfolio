@@ -6,12 +6,12 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 12px 30px;
   min-height: 50px;
   font-weight: 600;
   color: #fff;
-  background: var(--green-color);
+  background: var(--color);
   transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
   border: none;
   font-family: inherit;
@@ -41,7 +41,7 @@
   }
   &:hover,
   &:focus {
-    background: rgb(48, 173, 64);
+    background: var(--color-hover);
   }
 }
 
@@ -76,13 +76,15 @@
 }
 
 .BorderDark {
-  border: 2px solid var(--green-color);
+  border: 2px solid var(--color);
   background: rgba(0, 0, 0, 0);
   box-shadow: none;
   color: var(--text-color);
+  font-weight: 700;
   &:hover,
   &:focus {
     color: var(--white);
+    background: var(--color);
   }
 }
 

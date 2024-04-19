@@ -1,8 +1,8 @@
 {
-  "name": "deutscher_wortschatz",
+  "name": "my_portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://RuslanMirasov.github.io/deutscher_wortschatz_frontend/",
+  "homepage": "https://RuslanMirasov.github.io/myPortfolio/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",

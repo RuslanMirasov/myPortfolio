@@ -14,9 +14,9 @@
 //DESCTOP STYLES
 @media screen and (min-width: 1024px) {
   .Overlay {
-    justify-content: center;
+    justify-content: flex-end;
     position: relative;
-    margin: 0px 30px;
+    margin-left: 30px;
   }
   .Navigation {
     display: flex;

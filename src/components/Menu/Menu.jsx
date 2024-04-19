@@ -2,6 +2,7 @@ import { usePopup } from 'contexts/PopupContext';
 import { useEffect } from 'react';
 import { addArrowsToMultipleLinks, arrowBtnAction } from 'utils/menuFunctions';
 import MenuLink from './MenuLink';
+import Button from 'components/Buttons/Button/Button';
 import css from './Menu.module.scss';
 
 const Menu = () => {
@@ -17,49 +18,91 @@ const Menu = () => {
 
   return (
     <ul className={`${css.Menu} custom-scrollbar`}>
-      <MenuLink to="./" text="Startseite" />
-      <MenuLink to="./books" text="Bücher">
+      <MenuLink to="./" text="Home" />
+      <MenuLink to="./blog" text="Blog">
         <ul>
-          <MenuLink to="./books/book" text="Schritte plus neu A1.1">
+          <MenuLink to="./blog" text="Edication">
             <ul>
-              <MenuLink to="./books/book" text="Thema 1" />
-              <MenuLink to="./books/book" text="Thema 2">
+              <MenuLink to="./blog" text="Javascript">
                 <ul>
-                  <MenuLink to="./books/book" text="Thema 1" />
-                  <MenuLink to="./books/book" text="Thema 2" />
-                  <MenuLink to="./books/book" text="Thema 3" />
-                  <MenuLink to="./books/book" text="Thema 4" />
+                  <MenuLink to="./blog" text="Lesson 1" />
+                  <MenuLink to="./blog" text="Lesson 2" />
+                  <MenuLink to="./blog" text="Lesson 3" />
+                  <MenuLink to="./blog" text="Lesson 4" />
+                  <MenuLink to="./blog" text="Lesson 5" />
+                  <MenuLink to="./blog" text="Lesson 6" />
+                  <MenuLink to="./blog" text="Lesson 7" />
                 </ul>
               </MenuLink>
-              <MenuLink to="./books/book" text="Thema 3" />
-              <MenuLink to="./books/book" text="Thema 4" />
+              <MenuLink to="./blog" text="React" />
+              <MenuLink to="./blog" text="Redux-Toolkit" />
+              <MenuLink to="./blog" text="Next.js" />
+              <MenuLink to="./blog" text="TypeScript" />
+              <MenuLink to="./blog" text="Node.js" />
+              <MenuLink to="./blog" text="MySQL" />
             </ul>
           </MenuLink>
-          <MenuLink to="./books/book" text="Schritte plus neu A1.2" />
-          <MenuLink to="./books/book" text="Schritte plus neu A2.1" />
-          <MenuLink to="./books/book" text="Schritte plus neu A2.2" />
-          <MenuLink to="./books/book" text="Schritte plus neu B1.1" />
-          <MenuLink to="./books/book" text="Schritte plus neu B1.2">
+          <MenuLink to="./blog" text="Components">
             <ul>
-              <MenuLink to="./books/book" text="Thema 1" />
-              <MenuLink to="./books/book" text="Thema 2">
+              <MenuLink to="./blog" text="App" />
+              <MenuLink to="./blog" text="Accordeon" />
+              <MenuLink to="./blog" text="Header">
                 <ul>
-                  <MenuLink to="./books/book" text="Thema 1" />
-                  <MenuLink to="./books/book" text="Thema 2" />
-                  <MenuLink to="./books/book" text="Etwas planen" />
-                  <MenuLink to="./books/book" text="Thema 4" />
+                  <MenuLink to="./blog" text="Logo" />
+                  <MenuLink to="./blog" text="Navigation" />
+                  <MenuLink to="./blog" text="Menu" />
                 </ul>
               </MenuLink>
-              <MenuLink to="./books/book" text="Thema 3" />
-              <MenuLink to="./books/book" text="Thema 4" />
+              <MenuLink to="./blog" text="Buttons">
+                <ul>
+                  <MenuLink to="./blog" text="Button" />
+                  <MenuLink to="./blog" text="Close Button" />
+                  <MenuLink to="./blog" text="Burger Button" />
+                  <MenuLink to="./blog" text="Theme Switcher" />
+                  <MenuLink to="./blog" text="Scroll to top" />
+                </ul>
+              </MenuLink>
+              <MenuLink to="./blog" text="Menu" />
+              <MenuLink to="./blog" text="Typography">
+                <ul>
+                  <MenuLink to="./blog" text="TextWrapper" />
+                  <MenuLink to="./blog" text="Title" />
+                  <MenuLink to="./blog" text="Text" />
+                  <MenuLink to="./blog" text="List" />
+                </ul>
+              </MenuLink>
+              <MenuLink to="./blog" text="Footer" />
             </ul>
           </MenuLink>
-          <MenuLink to="./books/book" text="Schritte für schritte zum DTZ" />
-          <MenuLink to="./books/book" text="Einfach besser 500 B2 Beruf" />
+          <MenuLink to="./blog" text="Scripts">
+            <ul>
+              <MenuLink to="./blog" text="Utilites" />
+              <MenuLink to="./blog" text="Custom Scripts" />
+            </ul>
+          </MenuLink>
+          <MenuLink to="./blog" text="Job interview">
+            <ul>
+              <MenuLink to="./blog" text="General questions" />
+              <MenuLink to="./blog" text="HTML/CSS" />
+              <MenuLink to="./blog" text="JavaScript" />
+              <MenuLink to="./blog" text="React/Redux" />
+              <MenuLink to="./blog" text="Node.js/MongoDB" />
+            </ul>
+          </MenuLink>
         </ul>
       </MenuLink>
-      <MenuLink to="./books" text="Regeln" />
-      <MenuLink onClick={() => popupOpen('callback')} text="Kontakt" />
+      <MenuLink to="./portfolio" text="Portfolio" />
+      <MenuLink to="./books" text="About" />
+      <MenuLink to="./books" text="Skills" />
+      <MenuLink to="./books" text="Contacts" />
+      <MenuLink
+        text={
+          <Button size="small" variant="border-dark">
+            To Order
+          </Button>
+        }
+        onClick={() => popupOpen('request')}
+      />
     </ul>
   );
 };

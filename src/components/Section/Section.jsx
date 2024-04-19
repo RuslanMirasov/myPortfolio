@@ -5,15 +5,25 @@ const hexColor = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
 const rgbColor = /^rgb\(/;
 const rgbaColor = /^rgba\(/;
 const varColor = /^var\(/;
+const linearGradient = /^linear-gradient\(/;
+const radialGradient = /^radial-gradient\(/;
 
 const bgCheck = bgStyle => {
-  if (hexColor.test(bgStyle) || rgbColor.test(bgStyle) || rgbaColor.test(bgStyle) || varColor.test(bgStyle) || bgStyle === 'none') {
+  if (
+    hexColor.test(bgStyle) ||
+    rgbColor.test(bgStyle) ||
+    rgbaColor.test(bgStyle) ||
+    varColor.test(bgStyle) ||
+    linearGradient.test(bgStyle) ||
+    radialGradient.test(bgStyle) ||
+    bgStyle === 'none'
+  ) {
     return bgStyle;
   }
   return `url(${bgStyle}) no-repeat center center / cover`;
 };
 
-const Section = ({ bg = 'none', dark, padTop, padBottom, full, mask, children }) => {
+const Section = ({ bg = 'none', dark, full, padT, padB, noline, children }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -22,14 +32,15 @@ const Section = ({ bg = 'none', dark, padTop, padBottom, full, mask, children })
 
   const sectionClasses = {
     [css.Section]: true,
-    [css.padTopNone]: padTop === 'none',
-    [css.padTopSmall]: padTop === 'small',
-    [css.padTopBig]: padTop === 'big',
-    [css.padBottomNone]: padBottom === 'none',
-    [css.padBottomSmall]: padBottom === 'small',
-    [css.padBottomBig]: padBottom === 'big',
+    [css.padTopNormal]: padT,
+    [css.padBottomNormal]: padB,
+    [css.padTopSmall]: padT === 'small',
+    [css.padBottomSmall]: padB === 'small',
+    [css.padTopBig]: padT === 'big',
+    [css.padBottomBig]: padB === 'big',
     [css.FullScreen]: full,
     [css.Dark]: dark,
+    [css.Noline]: noline,
     [css.Visible]: isVisible === true,
   };
 
@@ -39,7 +50,7 @@ const Section = ({ bg = 'none', dark, padTop, padBottom, full, mask, children })
 
   return (
     <section className={currentSectionClasses} style={{ background: bgCheck(bg) }}>
-      {mask && <div className={css.Mask} style={{ background: mask }}></div>}
+      {!noline && <div className={css.Lines}></div>}
       <div className="container">{children}</div>
     </section>
   );

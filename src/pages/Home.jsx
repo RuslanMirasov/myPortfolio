@@ -2,35 +2,32 @@ import Section from '../components/Section/Section';
 import { TitleBox, Title, Text } from 'components/Typography';
 import { Button, ButtonsList } from 'components/Buttons';
 import { usePopup } from 'contexts/PopupContext';
+import LandingEffect from 'components/LandingEffect/LandingEffect';
 
 const Home = () => {
   const { popupOpen } = usePopup();
   return (
     <>
-      <Section
-        bg="https://www.schengenvisainfo.com/news/wp-content/uploads/2021/03/Germany-flag.jpg"
-        padTop="big"
-        padBottom="big"
-        mask="linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 43%, rgba(0,0,0,0.2) 100%)"
-        dark
-      >
+      <Section full>
+        <LandingEffect />
         <TitleBox>
-          <Title tag="h1" size="h2">
-            My site title
+          <Text>Hello, my name is Ruslan and I am</Text>
+          <Title tag="h1" size="h1">
+            FRONT-END <br />
+            DEVELOPER
           </Title>
-          <Text size="big">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-            Quis eaque est sed ut non rerum quasi itaque necessitatibus, <br />
-            sequi consequuntur? Aut excepturi at, sapiente debitis <br />
-            doloremque porro odit
+          <Text>
+            Development of adaptive, cross-browser, and cross-platform <br />
+            web applications with readable, semantic, and clean code <br />
+            based on your PSD or Figma design layout.
           </Text>
           <ButtonsList>
-            <Button to="./books/444">Unterrichten</Button>
-            <Button onClick={() => popupOpen('confirm', 'null', 'null')}>POPUP</Button>
+            <Button onClick={() => popupOpen('request', 'Place an order', 'Fill out the form and I will contact you shortly.')}>
+              View portfolio
+            </Button>
           </ButtonsList>
         </TitleBox>
       </Section>
-      <Section full></Section>
     </>
   );
 };

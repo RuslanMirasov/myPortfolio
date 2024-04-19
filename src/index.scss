@@ -1,7 +1,9 @@
 @import-normalize;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+  --color: #ec891f;
+  --color-hover: #444444;
   --text-color: #222222;
   --green-color: #229631;
   --red-color: #c22727;
@@ -25,9 +27,8 @@ body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif;
   color: var(--text-color);
-  background: #eee;
+  font-family: 'Raleway', sans-serif;
 }
 
 ul {
@@ -125,6 +126,10 @@ input[type='hidden'] {
       border: 1px solid var(--green-color);
     }
   }
+}
+
+.color {
+  color: var(--color);
 }
 
 //CUSTOM SCROLLBAR

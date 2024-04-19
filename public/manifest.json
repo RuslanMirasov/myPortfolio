@@ -1,6 +1,6 @@
 {
-  "short_name": "Deutscher Wortschatz",
-  "name": "App zum Lernen deutscher Wörter",
+  "short_name": "Ruslan Mirasov",
+  "name": "Web Developer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#222222",
   "background_color": "#ffffff"
 }
