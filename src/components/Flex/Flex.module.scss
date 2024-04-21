@@ -1,0 +1,30 @@
+.Flex {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+.taLeft {
+  justify-content: flex-start;
+}
+.taCenter {
+  justify-content: center;
+}
+.taRight {
+  justify-content: flex-end;
+}
+.taSpace {
+  justify-content: space-between;
+}
+.vaTop {
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.vaCenter {
+  align-items: center;
+  align-content: center;
+}
+.vaBottom {
+  align-items: flex-end;
+  align-content: flex-end;
+}

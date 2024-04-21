@@ -7,6 +7,7 @@ import PopupRequest from './PopupRequest';
 import PopupCallback from './PopupCallback';
 import PopupLogin from './PopupLogin';
 import PopupRegistration from './PopupRegistration';
+import PopupProject from './PopupProject';
 import './Popup.scss';
 
 const Popup = () => {
@@ -20,6 +21,7 @@ const Popup = () => {
     'type-callback': popupType === 'callback',
     'type-error': popupType === 'error',
     'type-confirm': popupType === 'confirm',
+    'type-project': popupType === 'project',
     'is-loading': isPopupLoading,
   };
 
@@ -39,6 +41,7 @@ const Popup = () => {
             {popupType === 'callback' && <PopupCallback />}
             {popupType === 'login' && <PopupLogin />}
             {popupType === 'registration' && <PopupRegistration />}
+            {popupType === 'project' && <PopupProject content={popupTitle} />}
           </div>
         </div>
       )}

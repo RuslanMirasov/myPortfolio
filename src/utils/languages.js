@@ -20,7 +20,7 @@ i18n
       },
     },
     fallbackLng: 'en', // язык по умолчанию
-    debug: true,
+    debug: false,
     interpolation: {
       escapeValue: false,
     },

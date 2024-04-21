@@ -1,6 +1,6 @@
 import css from './Title.module.scss';
 
-const Title = ({ tag, size, children }) => {
+const Title = ({ tag, size, align, children }) => {
   const Tag = tag || 'div';
   const titleClasses = {
     [css.Title]: true,
@@ -13,6 +13,7 @@ const Title = ({ tag, size, children }) => {
   };
   return (
     <Tag
+      style={align && { textAlign: align }}
       className={Object.keys(titleClasses)
         .filter(key => titleClasses[key])
         .join(' ')}

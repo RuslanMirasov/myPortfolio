@@ -1,8 +1,8 @@
 import css from './TitleBox.module.scss';
 
-const TitleBox = ({ align, width, children }) => {
+const TitleBox = ({ width, children }) => {
   return (
-    <div style={(align && { textAlign: align }, width && { maxWidth: width + 'px' })} className={css.TitleBox}>
+    <div style={width && { maxWidth: width + 'px' }} className={css.TitleBox}>
       {children}
     </div>
   );

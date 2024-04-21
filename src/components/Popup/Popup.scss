@@ -1,4 +1,4 @@
-$backdrop_background: rgba(133, 133, 133, 0.5);
+$backdrop_background: rgba(255, 255, 255, 0.9);
 $popup_background: var(--white);
 $popup_border_radius: 14px;
 $popup_padding: 40px 20px 30px 20px;
@@ -34,6 +34,7 @@ $info_width: 340px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background-color: $backdrop_background;
+  backdrop-filter: blur(2px);
   padding: 40px 20px;
   transition: 400ms;
   &.is-open {
@@ -133,6 +134,21 @@ $info_width: 340px;
         background: var(--green-color);
         height: 1px;
         opacity: 1;
+      }
+    }
+    &.type-project {
+      padding: 0px 0px;
+      max-width: 1366px;
+      border-radius: 40px 40px 40px 40px;
+      box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.3);
+      .popup-close {
+        width: 50px;
+        height: 50px;
+        &::before,
+        &::after {
+          width: 30px;
+          height: 1px;
+        }
       }
     }
 

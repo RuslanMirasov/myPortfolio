@@ -21,7 +21,7 @@ const Menu = () => {
   return (
     <ul className={`${css.Menu} custom-scrollbar`}>
       <MenuLink scrollto="body" text={t('home')} />
-      <MenuLink to="./blog" text={t('blog')}>
+      {/* <MenuLink to="./blog" text={t('blog')}>
         <ul>
           <MenuLink to="./blog" text="Edication">
             <ul>
@@ -93,12 +93,11 @@ const Menu = () => {
             </ul>
           </MenuLink>
         </ul>
-      </MenuLink>
-      <MenuLink to="./portfolio" text={t('portfolio')} />
-      <MenuLink to="./books" text={t('about')} />
-      <MenuLink scrollto="section-skills" text="test" />
+      </MenuLink> */}
+      <MenuLink scrollto="section-portfolio" text={t('portfolio')} />
+      <MenuLink scrollto="section-about" text={t('about')} />
       <MenuLink scrollto="section-skills" text={t('skills')} />
-      <MenuLink to="./books" text={t('contacts')} />
+      <MenuLink scrollto="section-contacts" text={t('contacts')} />
       <MenuLink
         text={
           <Button size="small" variant="border-dark">

@@ -3,8 +3,8 @@
   display: block;
   width: 100%;
   line-height: 1.1;
-  font-size: 30px;
   white-space: pre-line;
+  text-align: inherit;
 }
 
 .TitleH1 {
@@ -13,6 +13,7 @@
 }
 .TitleH2 {
   font-size: 60px;
+  line-height: 1;
 }
 .TitleH3 {
   font-size: 50px;

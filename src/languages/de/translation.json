@@ -10,5 +10,9 @@
   "about": "Über mich",
   "skills": "Fähigkeiten",
   "contacts": "Kontakte",
-  "to_order": "Zur Bestellung"
+  "to_order": "Zur Bestellung",
+  "portfolio_title": "PORTFOLIO",
+  "portfolio_subtitle": "Hier möchte ich ein paar meiner Projekte vorstellen, an denen ich in den letzten Jahren gearbeitet habe.",
+  "portfolio_button": "Alle Projekte sehen",
+  "portfolio_button_more": "Mehr herunterladen..."
 }

@@ -9,7 +9,6 @@ const Portfolio = () => {
           PORTFOLIO
         </Title>
       </Section>
-      <Section full></Section>
     </>
   );
 };
