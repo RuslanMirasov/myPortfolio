@@ -9,7 +9,7 @@ const Portfolio = () => {
   const { t } = useTranslation();
 
   return (
-    <Section padT padB extraClass="section-portfolio">
+    <Section padT="small" padB extraClass="section-portfolio">
       <Flex ta="space" va="bottom" gap="30" mb="40">
         <TitleBox width="390">
           <Title tag="h2" size="h3">

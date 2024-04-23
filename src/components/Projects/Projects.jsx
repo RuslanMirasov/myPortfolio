@@ -12,7 +12,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [visibleProjects, setVisibleProjects] = useState([]);
   const [showButton, setShowButton] = useState(true);
-  const itemsPerPage = 3;
+  const itemsPerPage = 6;
 
   useEffect(() => {
     const projectsData = i18n.language === 'de' ? projectsDe : projectsEn;

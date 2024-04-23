@@ -4,7 +4,7 @@ import { Title, Text } from 'components/Typography';
 import css from './ProjectFullDescription.module.scss';
 
 const ProjectFullDescription = ({ content }) => {
-  const { title, description, stack, features, category, poster, poster2, client, links } = content;
+  const { title, description, stack, features, category, poster, poster2, links } = content;
   return (
     <div className={css.ProjectFullDescription}>
       <div className={`${css.Image} custom-scrollbar`}>
@@ -38,7 +38,7 @@ const ProjectFullDescription = ({ content }) => {
             </li>
             {features.map((feature, index) => {
               return (
-                <li key={index} blank>
+                <li key={index}>
                   <Text size="small">{feature}</Text>
                 </li>
               );

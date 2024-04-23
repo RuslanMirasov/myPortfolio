@@ -1,0 +1,27 @@
+.AboutMe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin-top: 40px;
+}
+
+.leftPart {
+  text-transform: uppercase;
+  width: 33.333333%;
+}
+.rightPart {
+  width: 66.666666%;
+  padding-left: 40px;
+}
+
+.Foto {
+  display: block;
+  width: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+}
