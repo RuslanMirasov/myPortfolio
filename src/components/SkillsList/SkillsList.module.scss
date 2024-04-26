@@ -1,0 +1,57 @@
+.Skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  gap: 20px 0px;
+}
+
+.skillsTitle {
+  width: 33.333333%;
+  position: sticky;
+  top: 100px;
+  h2 {
+    text-transform: uppercase;
+  }
+}
+
+.SkillsList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  width: 66.666666%;
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 20%;
+    gap: 10px;
+    background: #fff;
+    position: relative;
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    &:nth-child(5n) {
+      border-right: none;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+    }
+    svg {
+      display: block;
+      position: absolute;
+      max-width: 80%;
+      height: 60%;
+    }
+  }
+}

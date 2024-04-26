@@ -11,17 +11,32 @@
   width: 33.333333%;
 }
 .rightPart {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
   width: 66.666666%;
   padding-left: 40px;
+  padding-right: 40px;
 }
 
 .Foto {
   display: block;
   width: 100%;
-  position: relative;
+  position: sticky;
+  top: 100px;
   img {
     width: 100%;
     position: relative;
     z-index: 2;
   }
+}
+
+.MoreInformation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.6s ease-in-out 0s;
 }

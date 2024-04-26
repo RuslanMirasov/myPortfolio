@@ -1,0 +1,72 @@
+.List {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px 0px;
+  > b {
+    width: 100%;
+  }
+  li {
+    width: 100%;
+    font-size: inherit;
+    list-style: none;
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+    b {
+      font-weight: 300;
+    }
+  }
+  &.Col_auto {
+    li {
+      width: auto;
+      margin-right: 10px;
+    }
+  }
+  &.DesctopCol_1 {
+    li {
+      width: 100%;
+    }
+  }
+  &.DesctopCol_2 {
+    li {
+      width: 50%;
+      padding-right: 20px;
+    }
+  }
+  &.DesctopCol_3 {
+    li {
+      width: 33.333333%;
+      padding-right: 20px;
+    }
+  }
+  &.DesctopCol_4 {
+    li {
+      width: 25%;
+      padding-right: 20px;
+    }
+  }
+  &.DesctopCol_5 {
+    li {
+      width: 20%;
+      padding-right: 20px;
+    }
+  }
+}
+
+.Mark {
+  gap: 14px 0px;
+  li {
+    padding-left: 20px;
+    &:before {
+      content: '\2022';
+      display: block;
+      font-size: inherit;
+      line-height: inherit;
+      border-radius: 5px;
+      position: absolute;
+      left: 0px;
+    }
+  }
+}

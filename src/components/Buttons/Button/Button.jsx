@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import css from './Button.module.scss';
 
-const Button = ({ to, onClick, variant, size, full, blank, disabled, scrollto, children }) => {
+const Button = ({ to, href, onClick, variant, size, full, blank, disabled, scrollto, children }) => {
   const allButtonClasses = {
     [css.Button]: true,
     [css.Big]: size === 'big',
@@ -18,9 +18,13 @@ const Button = ({ to, onClick, variant, size, full, blank, disabled, scrollto, c
     .join(' ');
 
   const buttonElement = to ? (
-    <Link to={to} className={currentClasses} target={blank ? '_blank' : undefined}>
+    <Link to={to} className={currentClasses} target={blank ? '_blank' : ''} rel="noreferrer">
       <span>{children}</span>
     </Link>
+  ) : href ? (
+    <a href={href} className={currentClasses} disabled={disabled} target={blank ? '_blank' : ''} rel="noreferrer">
+      <span>{children}</span>
+    </a>
   ) : scrollto ? (
     <button type="button" data-scrollto={scrollto} className={currentClasses} disabled={disabled}>
       <span>{children}</span>
