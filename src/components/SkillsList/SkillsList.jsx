@@ -1,3 +1,4 @@
+import Grid from 'components/Grid/Grid';
 import IconSkills from 'components/IconSkills/IconSkills';
 import { Title } from 'components/Typography';
 import css from './SkillsList.module.scss';
@@ -6,73 +7,72 @@ const SkillsList = ({ title }) => {
   return (
     <div className={css.Skills}>
       <div className={css.skillsTitle}>
-        <Title tag="h2" size="h2">
+        <Title tag="h2" size="h3">
           {title}
         </Title>
       </div>
-      <ul className={css.SkillsList}>
+      <Grid tag="ul" col={[5, 5, 3]} extraClass={css.SkillsList} width={['66.666666%', '66.666666%', '100%']}>
         <li>
-          <IconSkills name="html" />
+          <IconSkills name="html" size="60" />
         </li>
         <li>
-          <IconSkills name="css" />
+          <IconSkills name="css" size="60" />
         </li>
         <li>
-          <IconSkills name="scss" />
+          <IconSkills name="scss" size="60" />
         </li>
         <li>
-          <IconSkills name="javascript" />
+          <IconSkills name="javascript" size="50" />
         </li>
         <li>
-          <IconSkills name="typeScript" />
+          <IconSkills name="typeScript" size="50" />
         </li>
         <li>
-          <IconSkills name="jquery" />
+          <IconSkills name="jquery" size="80" />
         </li>
         <li>
-          <IconSkills name="react" />
+          <IconSkills name="react" size="50" />
         </li>
         <li>
-          <IconSkills name="redux" />
+          <IconSkills name="redux" size="45" />
         </li>
         <li>
-          <IconSkills name="node" />
+          <IconSkills name="node" size="40" />
         </li>
         <li>
-          <IconSkills name="mongoDB" />
+          <IconSkills name="mongoDB" size="25" />
         </li>
         <li>
-          <IconSkills name="php" />
+          <IconSkills name="php" size="65" />
         </li>
         <li>
-          <IconSkills name="wordpress" />
+          <IconSkills name="wordpress" size="80" />
         </li>
         <li>
-          <IconSkills name="wooCommerce" />
+          <IconSkills name="wooCommerce" size="18" />
         </li>
         <li>
-          <IconSkills name="mysql" />
+          <IconSkills name="mysql" size="35" />
         </li>
         <li>
-          <IconSkills name="github" />
-        </li>
-
-        <li>
-          <IconSkills name="webpack" />
+          <IconSkills name="github" size="45" />
         </li>
         <li>
-          <IconSkills name="vscode" />
+          <IconSkills name="webpack" size="50" />
         </li>
         <li>
-          <IconSkills name="photoshop" />
+          <IconSkills name="vscode" size="45" />
         </li>
         <li>
-          <IconSkills name="figma" />
+          <IconSkills name="photoshop" size="50" />
         </li>
         <li>
-          <IconSkills name="slack" />
+          <IconSkills name="figma" size="50" />
         </li>
-      </ul>
+        <li>
+          <IconSkills name="slack" size="45" />
+        </li>
+      </Grid>
     </div>
   );
 };

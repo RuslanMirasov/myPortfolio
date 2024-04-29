@@ -18,26 +18,21 @@
 }
 
 .SkillsList {
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   align-content: center;
-  width: 66.666666%;
-  border-left: 1px dashed rgba(0, 0, 0, 0.1);
-  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+  border-left: 1px dashed #e5e5e5;
+  border-top: 1px dashed #e5e5e5;
   li {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     align-content: center;
-    width: 20%;
-    gap: 10px;
     background: #fff;
     position: relative;
-    border-right: 1px dashed rgba(0, 0, 0, 0.1);
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed #e5e5e5;
+    border-bottom: 1px dashed #e5e5e5;
     &:nth-child(5n) {
       border-right: none;
     }
@@ -50,8 +45,8 @@
     svg {
       display: block;
       position: absolute;
-      max-width: 80%;
-      height: 60%;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 }

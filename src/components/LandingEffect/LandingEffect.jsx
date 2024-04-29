@@ -1,4 +1,4 @@
-import Icon from 'components/Icon/Icon';
+import IconLanding from 'components/IconLanding/IconLanding';
 import css from './LandingEffect.module.scss';
 import { useEffect } from 'react';
 
@@ -26,13 +26,13 @@ const LandingEffect = () => {
     <div className={css.LandingEffect}>
       <div className={css.SvgList} data-name="landingPage">
         <div className={`${css.SvgList_item} ${css.Svg_1}`}>
-          <Icon name="landing1" />
+          <IconLanding name="landing1" />
         </div>
         <div className={`${css.SvgList_item} ${css.Svg_2}`} data-name="landingPage2">
-          <Icon name="landing2" />
+          <IconLanding name="landing2" />
         </div>
         <div className={`${css.SvgList_item} ${css.Svg_3}`} data-name="landingPage3">
-          <Icon name="landing3" />
+          <IconLanding name="landing3" />
         </div>
       </div>
     </div>
