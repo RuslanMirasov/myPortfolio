@@ -16,12 +16,15 @@ const Spin = ({ size = 34, color }) => (
   </svg>
 );
 
-const Logo = ({ size = 24, color }) => (
-  <svg width={size} viewBox="0 0 39 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+const Logo = ({ size = 40, color, fill }) => (
+  <svg width={size} viewBox="0 0 40 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.224 0H1.30066L8.26263 13.4184L15.224 0Z" fill={color} />
+    <path d="M8.94958 27H16.5049V17.8656L8.94958 27Z" fill={color} />
     <path
-      d="M18.6931 19.2174V8.26436H18.5723L13.9705 19.2174H10.7493L6.14747 8.26436H6.02663V19.2174H0.770996V0.305664H7.72333L12.2986 11.5503H12.4211L16.9981 0.305664H23.9488V19.2174H18.6931ZM34.9682 12.042C37.0986 11.1027 38.2855 8.95621 38.2855 6.72147C38.2855 2.67594 35.4764 0.305664 30.0039 0.305664H26.9283V4.3969H29.4229C31.0451 4.3969 32.136 5.40238 32.136 6.8113C32.136 8.24072 31.0931 9.20206 29.4229 9.20206H26.9283V12.8694H28.8899L32.1327 19.2174H38.8665L34.9682 12.042Z"
-      fill={color}
+      d="M33.0739 17.4966C37.5384 15.4849 38.6531 12.6554 38.6531 9.32885C38.6531 4.45442 35.1146 0 28.3416 0H23.4951V6.35308H28.3416C30.3095 6.35308 31.2552 7.94365 31.2552 9.64558C31.2552 11.3475 30.3849 12.7059 28.4172 12.7059H23.4951V18.0661H25.5039L31.6714 27H40V26.6259L33.0736 17.4966H33.0739Z"
+      fill={fill}
     />
+    <path d="M0 17.9091V27H7.38122L0 17.9091Z" fill={color} />
   </svg>
 );
 
@@ -116,12 +119,45 @@ const Facebook = ({ color }) => (
   </svg>
 );
 
-const Icon = ({ name, color = 'currentColor', ...props }) => {
+const Sun = ({ color }) => (
+  <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M13 18.625C16.1066 18.625 18.625 16.1066 18.625 13C18.625 9.8934 16.1066 7.375 13 7.375C9.8934 7.375 7.375 9.8934 7.375 13C7.375 16.1066 9.8934 18.625 13 18.625Z"
+      stroke="black"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M13 4.68182V2.5" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M6.89707 6.89707L5.5752 5.5752" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M4.375 13H2.5" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M6.89707 19.103L5.5752 20.4249" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M13 21.625V23.5" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M19.1035 19.103L20.4254 20.4249" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M21.625 13H23.5" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M19.1035 6.89707L20.4254 5.5752" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const Moon = ({ color }) => (
+  <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M9.30769 8.38462C9.30769 7.20692 9.48115 6.015 9.92308 5C6.98346 6.27962 5 9.28154 5 12.6923C5 17.2804 8.71962 21 13.3077 21C16.7185 21 19.7204 19.0165 21 16.0769C19.985 16.5188 18.7931 16.6923 17.6154 16.6923C13.0273 16.6923 9.30769 12.9727 9.30769 8.38462Z"
+      stroke={color}
+      strokeWidth="1"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const Icon = ({ name, color = 'currentColor', fill, ...props }) => {
   return (
     <>
-      {!name && <Default color={color} {...props} />}
+      {!name && <Default color={color} fill={fill} {...props} />}
+      {name === 'moon' && <Moon color={color} {...props} />}
+      {name === 'sun' && <Sun color={color} {...props} />}
       {name === 'spin' && <Spin color={color} {...props} />}
-      {name === 'logo' && <Logo color={color} {...props} />}
+      {name === 'logo' && <Logo color={color} fill={fill} {...props} />}
       {name === 'error' && <Error color={color} {...props} />}
       {name === 'confirm' && <Confirm color={color} {...props} />}
       {name === 'select-arrow' && <SelectArrow color={color} {...props} />}

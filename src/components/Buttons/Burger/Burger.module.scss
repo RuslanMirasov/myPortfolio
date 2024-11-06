@@ -1,7 +1,3 @@
-$burger_size: 30px;
-$burger_size_tablet: 30px;
-$burger_size_mobil: 24px;
-
 .Burger {
   display: flex;
   flex-wrap: nowrap;
@@ -9,11 +5,13 @@ $burger_size_mobil: 24px;
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: $burger_size;
-  height: $burger_size;
+  width: 32px;
+  height: 32px;
   border: none;
   background: none;
   cursor: pointer;
+  margin: auto 0px;
+  z-index: 6;
   span,
   &:before,
   &:after {
@@ -21,7 +19,7 @@ $burger_size_mobil: 24px;
     display: block;
     position: absolute;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: var(--text-color);
     border-radius: 2px;
     transition: 0.4s ease-out;
@@ -29,12 +27,14 @@ $burger_size_mobil: 24px;
   span {
     transform: translate(0%, 0%);
     opacity: 1;
+    width: 75%;
+    right: 0px;
   }
   &:before {
-    transform: translate(0px, -9px) rotate(0deg);
+    transform: translate(0px, -10px) rotate(0deg);
   }
   &:after {
-    transform: translate(0px, 9px) rotate(0deg);
+    transform: translate(0px, 10px) rotate(0deg);
   }
   &.isOpen {
     span {

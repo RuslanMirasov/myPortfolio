@@ -2,25 +2,31 @@ import { useTranslation } from 'react-i18next';
 import Section from 'components/Section/Section';
 import { TitleBox, Title, Text } from 'components/Typography';
 import { Button, ButtonsList, ScrollDown } from 'components/Buttons';
-import LandingEffect from 'components/LandingEffect/LandingEffect';
+import Container from 'components/Container/Container';
+import Experience from 'components/Experience/Experience';
 
 const Hero = () => {
   const { t } = useTranslation();
 
   return (
     <Section full extraClass="section-hero">
-      <LandingEffect />
-      <TitleBox>
-        <Text>{t('hero_head')}</Text>
-        <Title tag="h1" size="h1">
-          FRONT-END <br />
-          {t('logo')}
-        </Title>
-        <Text width="450">{t('hero_subtitle')}</Text>
-        <ButtonsList>
-          <Button scrollto="section-portfolio">{t('hero_button')}</Button>
-        </ButtonsList>
-      </TitleBox>
+      <Experience />
+      <Container>
+        <TitleBox>
+          <b>{t('hero_head')}</b>
+          <Title tag="h1" size="h1">
+            Front-end <br />
+            {t('logo')}
+          </Title>
+          <Text width="350">{t('hero_subtitle')}</Text>
+          <ButtonsList>
+            <Button variant="border-dark" scrollto="section-portfolio">
+              Portfolio
+            </Button>
+          </ButtonsList>
+        </TitleBox>
+      </Container>
+
       <ScrollDown scrollto="section-portfolio" />
     </Section>
   );

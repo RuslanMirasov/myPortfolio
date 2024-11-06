@@ -3,29 +3,26 @@
   top: 0px;
   left: 0px;
   width: 100%;
-  padding: 10px 0px;
   color: var(--text-color);
-  background: var(--white);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: border-bottom 0.3s, background 0.3s;
   z-index: 10;
-  &.fix {
-    color: var(--text-color);
-  }
 }
 
 .Container {
   display: flex;
   width: 100%;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.LeftPart {
-  display: inline-flex;
-  align-items: center;
-  align-content: center;
-  gap: 40px;
+  padding: 10px 0px;
+  gap: 34px;
+  @media (max-width: 1279px) {
+    padding: 10px 20px;
+  }
+  @media (max-width: 767px) {
+    gap: 26px;
+  }
 }

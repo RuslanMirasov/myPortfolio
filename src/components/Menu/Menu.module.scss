@@ -9,12 +9,23 @@
     max-height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-
+    padding: 60px 13px 150px 30px;
     > li {
-      border-top: 1px solid #ccc;
       padding: 15px 0px;
-      &:first-child {
-        border-top: none;
+      > ul {
+        li {
+          &:first-child {
+            padding-top: 20px;
+          }
+          &:last-child {
+            padding-bottom: 0px;
+          }
+          ul li {
+            &:last-child {
+              padding-bottom: 10px;
+            }
+          }
+        }
       }
     }
     li {
@@ -25,13 +36,13 @@
         display: block;
         position: relative;
         width: 100%;
-        font-size: 38px;
+        font-size: 26px;
+        font-weight: 600;
         line-height: 1;
         font-family: inherit;
-        font-weight: 600;
-        padding-right: 50px;
+        padding-right: 40px;
         transition: 0.3s;
-        color: var(--blue-color);
+        color: var(--text-color);
       }
       /*LEVEL 2*/
       ul {
@@ -42,27 +53,22 @@
         padding-left: 20px;
         transition: 0.6s;
         overflow: hidden;
+
         li {
-          padding: 5px 0px;
-          &:first-child {
-            padding: 14px 0px 5px 0px;
-          }
-          &:last-child {
-            padding: 5px 0px 14px 0px;
-          }
+          padding: 8px 0px;
           a {
             font-size: 18px;
-            font-weight: 400;
+            font-weight: 500;
             &:before {
               content: '';
               display: block;
               position: absolute;
               left: -18px;
               top: 7px;
-              width: 7px;
-              height: 7px;
+              width: 5px;
+              height: 5px;
               border-radius: 6px;
-              background: var(--blue-color);
+              background: var(--text-color);
             }
           }
           .More {
@@ -80,7 +86,7 @@
     align-items: center;
     align-content: center;
     width: 38px;
-    height: 38px;
+    height: 26px;
     position: absolute;
     color: inherit;
     z-index: 2;
@@ -88,7 +94,7 @@
     transition: 0.6s;
     transform: rotate(0deg);
     user-select: none;
-    color: var(--blue-color);
+    color: var(--text-color);
     cursor: pointer;
     svg {
       width: 40%;
@@ -100,10 +106,10 @@
     &.Open {
       > .More {
         transform: rotate(180deg);
-        color: var(--yellow-color);
+        color: var(--color);
       }
       > a {
-        color: var(--yellow-color);
+        color: var(--color);
       }
     }
   }
@@ -130,6 +136,9 @@
         flex-wrap: wrap;
         align-content: center;
         height: 100%;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0px;
         transition: 0.1s;
       }
       &:hover,
@@ -153,7 +162,6 @@
         position: relative;
         font-size: 16px;
         line-height: 1;
-        font-weight: 600;
         color: var(--text-color);
       }
       /*LEVEL 2*/
@@ -161,10 +169,10 @@
         display: block;
         height: auto !important;
         position: absolute;
-        left: -20px;
+        left: -17px;
         top: 100%;
-        margin-top: 15px;
-        background: var(--white);
+        margin-top: 10px;
+        background: var(--bg);
         color: var(--text-color);
         border-radius: 0px;
         width: auto;
@@ -174,7 +182,7 @@
         opacity: 0;
         pointer-events: none;
         padding: 10px 0px;
-        border: 1px solid #d4d4d4;
+        border: 1px solid var(--border);
         &:after {
           content: '';
           width: 14px;
@@ -184,8 +192,8 @@
           top: -8px;
           left: 20px;
           transform: rotate(45deg);
-          border-left: 1px solid #d4d4d4;
-          border-top: 1px solid #d4d4d4;
+          border-left: 1px solid var(--border);
+          border-top: 1px solid var(--border);
         }
         &:before {
           content: '';
@@ -201,7 +209,6 @@
             display: block;
             white-space: nowrap;
             font-size: 14px;
-            font-weight: 600;
             text-transform: capitalize;
             color: inherit;
             padding: 8px 30px 8px 20px;
@@ -211,7 +218,7 @@
             z-index: 2;
             right: 10px;
             top: 50%;
-            margin-top: -6px;
+            margin-top: -4px;
             transform: rotate(-90deg) translate(0px, 0px);
           }
           &:hover,

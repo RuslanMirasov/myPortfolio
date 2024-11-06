@@ -1,0 +1,13 @@
+.Experience {
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  transform: translate(12%, 0%);
+  @media (max-width: 767px) {
+    bottom: auto;
+    height: 100vw;
+    transform: translate(0%, 0%);
+  }
+}

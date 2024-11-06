@@ -8,7 +8,7 @@
     "title": "DMITRIY PISARUK",
     "description": "Это API предоставляет доступ к базе данных для мобильного приложения.",
     "stack": ["Node.js", "Express", "MongoDB"],
-    "links": ["https://pisaruk.ru/en/main_en/", "https://github.com/RuslanMirasov/pisaruk"],
+    "links": ["https://pisaruk.ru/en", "https://github.com/RuslanMirasov/pisaruk"],
     "features": ["Аутентификация", "Авторизация", "CRUD операции"],
     "client": "Компания XYZ"
   },
@@ -21,7 +21,7 @@
     "title": "NECTAR SPA.SALON",
     "description": "Это веб-приложение позволяет пользователям создавать, управлять и отслеживать свои задачи.",
     "stack": ["HTML", "CSS", "JavaScript", "React"],
-    "links": ["https://example.com/project1"],
+    "links": ["https://spa.mnectar.eu/", "https://github.com/RuslanMirasov/spa_salon_nectar"],
     "features": ["Список задач", "Фильтрация", "Поиск"],
     "client": "Компания ABC"
   },
